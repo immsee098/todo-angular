@@ -6,7 +6,7 @@
 
   <input type="text" placeholder="Enter Todo" (keyup.enter)="addTodo(input)" #input>
   <ul class="todos">
-    <li *ngFor='let todo of todos'>
+    <li *ngFor='let todo of todos' (change)='toggleTodo()'>
       <input type="checkbox" [checked]="todo.completed" id="{{todo.id}}">
       {{todo.content}}
       <button (click)="removeTodo(todo.id)">X</button>

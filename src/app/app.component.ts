@@ -27,6 +27,11 @@ export class AppComponent {
     this.todos = this.todos.filter(todo => todo.id !== id)
   }
 
+  toggleTodo(id){
+    console.log('ccc');
+
+  }
+
   generateId(){
     return this.todos.length ? Math.max(...this.todos.map(todo => todo.id))+1 : 1;
   }
